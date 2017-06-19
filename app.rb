@@ -2,17 +2,10 @@ require 'sinatra'
 require 'shotgun'
 
 get '/' do
-  "hello world"
+  "testing"
 end
-
-get '/secret' do
-  "it's too hot"
-end
-
-get '/test' do
-  "it's working"
-end
-
-get '/second' do
-  "it's also working"
+get '/cat' do
+  "<div>
+    <img style='border:5px dashed red' src='http://bit.ly/1eze8aE'>
+  </div>"
 end
