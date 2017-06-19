@@ -1,10 +1,9 @@
-<h1>
-My name is <%= @name %>
-
+<h1 style='color:<%= @color %>'>
+My name is jini
 </h1>
 
-<body>
-  <div>
-    <img style='border:5px dashed red' src='http://bit.ly/1eze8aE'>
-  </div>
+<body style='background-color:<%= @background %>;'>
+    <div>
+      <img style='border:5px dashed <%= @color %>' src='http://bit.ly/1eze8aE'>
+    </div>
 </body>
