@@ -8,12 +8,7 @@ end
 
 get '/named_cat' do
   @name = params[:name]
-  erb :index
-end
-
-get '/colored_cat' do
-  @name = params[:name]
   @color = params[:color]
-  @background = params[:background]
+  @border_color = params[:border_color]
   erb :index
 end

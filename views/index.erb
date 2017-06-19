@@ -1,9 +1,31 @@
 <h1 style='color:<%= @color %>'>
-My name is jini
+My name is <%= @name %>
 </h1>
 
-<body style='background-color:<%= @background %>;'>
+<% if @name.nil? %>
+  <form action="/named_cat">
     <div>
-      <img style='border:5px dashed <%= @color %>' src='http://bit.ly/1eze8aE'>
+      <label for="name"> Name:</label>
+      <input type="text" name="name">
+    </div>
+
+    <div>
+      <label for="color"> color:</label>
+      <input type="color" name="color">
+    </div>
+
+    <div class="button">
+        <button type ="submit">Submit</button>
+    </div>
+  </form>
+<% end %>
+
+<form action="/named_cat">
+
+</form
+
+<body>
+    <div>
+      <img style='border:5px dashed <%= @border_color %>' src='http://bit.ly/1eze8aE'>
     </div>
 </body>
