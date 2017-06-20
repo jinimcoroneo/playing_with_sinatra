@@ -2,30 +2,21 @@
 My name is <%= @name %>
 </h1>
 
-<% if @name.nil? %>
-  <form action="/named_cat">
-    <div>
-      <label for="name"> Name:</label>
-      <input type="text" name="name">
-    </div>
 
-    <div>
-      <label for="color"> color:</label>
-      <input type="color" name="color">
-    </div>
-
-    <div class="button">
-        <button type ="submit">Submit</button>
-    </div>
-  </form>
-<% end %>
-
-<form action="/named_cat">
-
-</form
 
 <body>
+    <div>
+    <% unless @name %>
+    <form action="/test">
+    name: <input type="text" name="name">
+    <input type="submit" value="Submit">
+    
+    </form>
+    <%end%>
+    </div>
+
     <div>
       <img style='border:5px dashed <%= @border_color %>' src='http://bit.ly/1eze8aE'>
     </div>
 </body>
+
