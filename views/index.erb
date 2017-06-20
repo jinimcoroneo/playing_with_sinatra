@@ -2,15 +2,12 @@
 My name is <%= @name %>
 </h1>
 
-
-
 <body>
     <div>
     <% unless @name %>
-    <form action="/test">
+    <form action="/named_cat" method="post">
     name: <input type="text" name="name">
     <input type="submit" value="Submit">
-    
     </form>
     <%end%>
     </div>
@@ -19,4 +16,3 @@ My name is <%= @name %>
       <img style='border:5px dashed <%= @border_color %>' src='http://bit.ly/1eze8aE'>
     </div>
 </body>
-
